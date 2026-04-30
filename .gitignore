@@ -1,15 +1,28 @@
 *.iml
 .gradle
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+/.idea/
 .DS_Store
 /build
 /captures
 .externalNativeBuild
 .cxx
-local.properties
+
+# Secrets & Keys (NEVER PUSH THESE)
+.env
+.env.*
+serviceAccountKey.json
+google-services.json
+GoogleService-Info.plist
+*.pem
+*.key
+*.p12
+*.keystore
+*.jks
+
+# Build & Output
+dist/
+out/
+DerivedData/
+node_modules/
+Pods/
