@@ -1,0 +1,214 @@
+[
+  {
+    "name": "Plastic bottle",
+    "synonyms": ["pet bottle", "water bottle", "plastic flaska", "plastflaska", "bottle"],
+    "category": "PLASTIC_PACKAGING",
+    "instructions": "Empty and place in plastic packaging.",
+    "why": "Plastic packaging should be sorted for recycling."
+  },
+  {
+    "name": "Plastic lid / cap",
+    "synonyms": ["bottle cap", "plastic cap", "lock", "kork", "plastlock"],
+    "category": "PLASTIC_PACKAGING",
+    "instructions": "Sort as plastic packaging.",
+    "why": "Plastic lids are plastic packaging."
+  },
+  {
+    "name": "Soft plastic / bag",
+    "synonyms": ["plastic bag", "soft plastic", "bubble wrap", "styrofoam", "fruit net", "plastpåse"],
+    "category": "PLASTIC_PACKAGING",
+    "instructions": "Sort as plastic packaging.",
+    "why": "Soft and hard plastic packaging are collected as plastic packaging."
+  },
+  {
+    "name": "Medicine blister pack (tray)",
+    "synonyms": ["medicine tray", "blister pack", "tablet pack"],
+    "category": "PLASTIC_PACKAGING",
+    "instructions": "Sort as plastic packaging.",
+    "why": "Medicine trays are included in plastic packaging examples."
+  },
+
+  {
+    "name": "Aluminium can",
+    "synonyms": ["can", "metal can", "burk", "aluminium burk"],
+    "category": "METAL_PACKAGING",
+    "instructions": "Empty and sort as metal packaging.",
+    "why": "Cans are metal packaging."
+  },
+  {
+    "name": "Metal lid / bottle cap",
+    "synonyms": ["metal lid", "bottle cap", "metal cap", "metallock"],
+    "category": "METAL_PACKAGING",
+    "instructions": "Sort as metal packaging.",
+    "why": "Bottle caps and metal lids are metal packaging."
+  },
+  {
+    "name": "Metal tube",
+    "synonyms": ["metal tube", "tandkrämstub", "tube"],
+    "category": "METAL_PACKAGING",
+    "instructions": "Sort as metal packaging.",
+    "why": "Metal tubes are listed as metal packaging."
+  },
+
+  {
+    "name": "Milk / juice carton",
+    "synonyms": ["milk carton", "juice carton", "tetra", "kartong"],
+    "category": "PAPER_PACKAGING",
+    "instructions": "Empty, flatten, and sort as paper packaging.",
+    "why": "Cartons from milk and similar are paper packaging."
+  },
+  {
+    "name": "Egg carton",
+    "synonyms": ["egg box", "äggkartong"],
+    "category": "PAPER_PACKAGING",
+    "instructions": "Sort as paper packaging.",
+    "why": "Egg cartons are paper packaging."
+  },
+  {
+    "name": "Cardboard box / shoe box",
+    "synonyms": ["cardboard", "corrugated cardboard", "shoe box", "kartong", "wellpapp"],
+    "category": "PAPER_PACKAGING",
+    "instructions": "Flatten and sort as paper packaging.",
+    "why": "Corrugated cardboard and shoe boxes are paper packaging."
+  },
+  {
+    "name": "Paper cup",
+    "synonyms": ["paper cup", "pappersmugg"],
+    "category": "PAPER_PACKAGING",
+    "instructions": "Sort as paper packaging.",
+    "why": "Paper cups are listed under paper packaging."
+  },
+
+  {
+    "name": "Newspaper / magazines",
+    "synonyms": ["newspaper", "magazine", "leaflet", "brochure", "catalogue", "paperback", "tidning"],
+    "category": "NEWSPAPERS_PAPER",
+    "instructions": "Keep dry and sort as newspapers/paper.",
+    "why": "Newspapers and paper products are collected separately."
+  },
+  {
+    "name": "Writing / drawing paper",
+    "synonyms": ["printer paper", "writing paper", "drawing paper"],
+    "category": "NEWSPAPERS_PAPER",
+    "instructions": "Sort as newspapers/paper.",
+    "why": "Writing and drawing paper is included."
+  },
+
+  {
+    "name": "Clear glass bottle / jar",
+    "synonyms": ["clear glass", "glass jar", "clear bottle", "glasburk", "flaska"],
+    "category": "CLEAR_GLASS_PACKAGING",
+    "instructions": "Sort as clear glass packaging.",
+    "why": "Clear glass bottles and jars are sorted as clear glass."
+  },
+  {
+    "name": "Coloured glass bottle / jar",
+    "synonyms": ["colored glass", "coloured glass", "brown bottle", "green bottle"],
+    "category": "COLOURED_GLASS_PACKAGING",
+    "instructions": "Sort as coloured glass packaging.",
+    "why": "Coloured glass bottles and jars are sorted separately."
+  },
+  {
+    "name": "Drinking glass / vase / mirror (NOT packaging)",
+    "synonyms": ["drinking glass", "glass cup", "vase", "mirror glass", "glass plate", "china"],
+    "category": "BULKY_WASTE",
+    "instructions": "Do not put with glass packaging. Take to recycling centre if needed.",
+    "why": "The guide says these should never be mixed with glass packaging."
+  },
+
+  {
+    "name": "Banana peel / fruit peel",
+    "synonyms": ["banana peel", "fruit peel", "potato peel", "onion peel", "avocado peel"],
+    "category": "FOOD_WASTE",
+    "instructions": "Sort as food waste.",
+    "why": "Fruit and potato peel etc. are food waste."
+  },
+  {
+    "name": "Eggshells / coffee filters / tea bags",
+    "synonyms": ["eggshell", "coffee filter", "tea bag", "fish bones", "seafood shells"],
+    "category": "FOOD_WASTE",
+    "instructions": "Sort as food waste.",
+    "why": "These are listed as food waste."
+  },
+
+  {
+    "name": "Diaper / pad / tampon",
+    "synonyms": ["diaper", "nappy", "pad", "tampon"],
+    "category": "RESIDUAL_WASTE",
+    "instructions": "Sort as residual waste.",
+    "why": "These are listed under residual waste."
+  },
+  {
+    "name": "Cigarette butt / snuff",
+    "synonyms": ["cigarette butt", "snuff"],
+    "category": "RESIDUAL_WASTE",
+    "instructions": "Sort as residual waste.",
+    "why": "These are listed under residual waste."
+  },
+  {
+    "name": "Toothbrush / cotton buds / razor",
+    "synonyms": ["toothbrush", "cotton bud", "q-tip", "disposable razor"],
+    "category": "RESIDUAL_WASTE",
+    "instructions": "Sort as residual waste.",
+    "why": "These are listed under residual waste."
+  },
+
+  {
+    "name": "Small electronics",
+    "synonyms": ["electric toothbrush", "shaver", "mobile phone", "remote control", "charger", "headphones", "toy", "mouse"],
+    "category": "SMALL_ELECTRONICS",
+    "instructions": "Take to recycling centre or collection cabinet (Samlaren) when available.",
+    "why": "The guide lists these as small electronics and mentions Samlaren for small devices."
+  },
+  {
+    "name": "Light bulb / LED / halogen",
+    "synonyms": ["light bulb", "led lamp", "halogen", "low energy lamp"],
+    "category": "LIGHT_BULBS",
+    "instructions": "Take to recycling centre or Samlaren collection point.",
+    "why": "Light bulbs and lamps are listed and can be deposited in Samlaren."
+  },
+  {
+    "name": "Small batteries",
+    "synonyms": ["aa battery", "aaa battery", "button cell", "square battery", "rod battery"],
+    "category": "SMALL_BATTERIES",
+    "instructions": "Take to Samlaren or hazardous waste truck / collection point.",
+    "why": "Small batteries are listed; the guide mentions Samlaren and hazardous waste services."
+  },
+
+  {
+    "name": "Hazardous waste (paint/solvents/spray)",
+    "synonyms": ["spray can", "nail polish", "solvent", "paint", "varnish"],
+    "category": "HAZARDOUS_WASTE",
+    "instructions": "Take to recycling centre or hazardous waste truck.",
+    "why": "These are listed as hazardous waste and the guide describes the hazardous waste truck."
+  },
+
+  {
+    "name": "Textiles (clean and dry)",
+    "synonyms": ["clothes", "shoes", "curtains", "towels", "sheets", "textiles"],
+    "category": "TEXTILES",
+    "instructions": "Sort as textiles (clean and dry).",
+    "why": "Textiles are listed with the requirement clean and dry."
+  },
+  {
+    "name": "Bulky waste",
+    "synonyms": ["furniture", "mattress", "carpet", "scrap metal", "wood waste", "pots", "ceramics", "bike"],
+    "category": "BULKY_WASTE",
+    "instructions": "Take to a staffed recycling centre.",
+    "why": "Bulky waste is listed and the guide explains recycling centres handle this."
+  },
+  {
+    "name": "Garden waste",
+    "synonyms": ["leaves", "grass", "twigs", "branches", "hedge clippings", "windfalls"],
+    "category": "GARDEN_WASTE",
+    "instructions": "Take to recycling centre (garden waste).",
+    "why": "Garden waste is listed and recycling centres are mentioned for this."
+  },
+  {
+    "name": "Second hand items (reuse)",
+    "synonyms": ["second hand", "reuse", "functional stuff"],
+    "category": "SECOND_HAND",
+    "instructions": "Bring to reuse/second-hand collection (e.g., Pop-up Returen when available).",
+    "why": "Second-hand items and Pop-up Returen are mentioned for reuse/recycling."
+  }
+]

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SortSmart-SE</string>
+
+    <!-- HomeScreen -->
+    <string name="smart_waste_sorting">سمارٹ فضلہ چھانٹنا</string>
+    <string name="notifications">اطلاعات</string>
+    <string name="quick_categories">فوری زمرے</string>
+    <string name="plastic">پلاسٹک</string>
+    <string name="paper">کاغذ</string>
+    <string name="glass">شیشہ</string>
+    <string name="food">کھانا</string>
+    <string name="hazardous">خطرناک</string>
+    <string name="browse_categories">زمرے براؤز کریں</string>
+    <string name="browse_categories_desc">فضلہ کی اقسام اور انہیں درست طریقے سے ٹھکانے لگانے کا طریقہ دریافت کریں۔</string>
+    <string name="recent_searches">حالیہ تلاشیں</string>
+    <string name="recent_searches_desc">اپنی حالیہ تلاش کی تاریخ دیکھیں۔</string>
+
+    <!-- BottomNavBar -->
+    <string name="nav_home">ہوم</string>
+    <string name="nav_scan">اسکین کریں</string>
+    <string name="nav_tips">تجاویز</string>
+    <string name="nav_profile">پروفائل</string>
+
+    <!-- SearchBar -->
+    <string name="search_placeholder">کچرا تلاش کریں</string>
+    <string name="search_icon">تلاش کا آئیکن</string>
+    <string name="clear_search">تلاش صاف کریں</string>
+
+    <!-- SearchResultsScreen -->
+    <string name="search_results">تلاش کے نتائج</string>
+    <string name="back">پیچھے</string>
+    <string name="results">نتائج</string>
+
+    <!-- ItemDetailScreen -->
+    <string name="favorite">پسندیدہ</string>
+    <string name="how_to_dispose">ٹھکانے لگانے کا طریقہ</string>
+    <string name="preparation">تیاری</string>
+    <string name="why">کیوں؟</string>
+    <string name="remove_from_favorites">پسندیدہ سے ہٹائیں</string>
+    <string name="save_to_favorites">پسندیدہ میں محفوظ کریں</string>
+
+    <!-- FavoritesScreen -->
+    <string name="favorites_and_history">پسندیدہ اور تاریخ</string>
+    <string name="favorites">پسندیدہ</string>
+    <string name="recent">حالیہ</string>
+    <string name="no_items_found">کوئی آئٹم نہیں ملا۔</string>
+
+    <!-- SplashScreen -->
+    <string name="logo">لوگو</string>
+    <string name="splash_smart_waste">سمارٹ ویسٹ</string>
+    <string name="splash_sorting">چھانٹنا</string>
+    <string name="splash_assistant">اسسٹنٹ</string>
+    <string name="splash_sort_smarter">بہتر چھانٹیں۔</string>
+    <string name="splash_recycle_better">بہتر ری سائیکل کریں۔ ایک ساتھ۔</string>
+
+    <!-- ScanScreen -->
+    <string name="scan_title">کچرا اسکین کریں</string>
+    <string name="point_camera">پہچاننے کے لیے کیمرے کو شے پر مرکوز کریں</string>
+    <string name="capture">تصویر کھینچیں</string>
+    <string name="flash">فلیش</string>
+    <string name="switch_camera">کیمرہ تبدیل کریں</string>
+
+    <!-- TipsScreen -->
+    <string name="eco_tips_title">ماحولیاتی تجاویز</string>
+    <string name="tip_1_title">سنگل یوز پلاسٹک کم کریں</string>
+    <string name="tip_1_desc">دوبارہ استعمال کے قابل پانی کی بوتل اور شاپنگ بیگ ساتھ رکھیں۔</string>
+    <string name="tip_2_title">کھاد بنانے کی بنیادی باتیں</string>
+    <string name="tip_2_desc">کھانے کے بچ جانے والے حصوں کو پودوں کے لیے غذائیت سے بھرپور مٹی میں تبدیل کریں۔</string>
+    <string name="tip_3_title">ای ویسٹ ری سائیکلنگ</string>
+    <string name="tip_3_desc">الیکٹرانکس کو کبھی کچرے میں نہ پھینکیں۔ انہیں ای ویسٹ سینٹر لے جائیں۔</string>
+</resources>

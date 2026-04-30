@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SortSmart-SE</string>
+
+    <!-- HomeScreen -->
+    <string name="smart_waste_sorting">Clasificación Inteligente</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="quick_categories">Categorías Rápidas</string>
+    <string name="plastic">Plástico</string>
+    <string name="paper">Papel</string>
+    <string name="glass">Vidrio</string>
+    <string name="food">Comida</string>
+    <string name="hazardous">Peligroso</string>
+    <string name="browse_categories">Explorar Categorías</string>
+    <string name="browse_categories_desc">Explora tipos de residuos y cómo desecharlos.</string>
+    <string name="recent_searches">Búsquedas Recientes</string>
+    <string name="recent_searches_desc">Ver tu historial de búsqueda.</string>
+
+    <!-- BottomNavBar -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_scan">Escanear</string>
+    <string name="nav_tips">Consejos</string>
+    <string name="nav_profile">Perfil</string>
+
+    <!-- SearchBar -->
+    <string name="search_placeholder">Buscar residuo</string>
+    <string name="search_icon">Icono de búsqueda</string>
+    <string name="clear_search">Borrar búsqueda</string>
+
+    <!-- SearchResultsScreen -->
+    <string name="search_results">Resultados</string>
+    <string name="back">Atrás</string>
+    <string name="results">Resultados</string>
+
+    <!-- ItemDetailScreen -->
+    <string name="favorite">Favorito</string>
+    <string name="how_to_dispose">Cómo desechar</string>
+    <string name="preparation">Preparación</string>
+    <string name="why">¿Por qué?</string>
+    <string name="remove_from_favorites">Quitar de Favoritos</string>
+    <string name="save_to_favorites">Guardar en Favoritos</string>
+
+    <!-- FavoritesScreen -->
+    <string name="favorites_and_history">Favoritos e Historial</string>
+    <string name="favorites">Favoritos</string>
+    <string name="recent">Recientes</string>
+    <string name="no_items_found">No se encontraron artículos.</string>
+
+    <!-- SplashScreen -->
+    <string name="logo">Logo</string>
+    <string name="splash_smart_waste">Residuos</string>
+    <string name="splash_sorting">Inteligentes</string>
+    <string name="splash_assistant">Asistente</string>
+    <string name="splash_sort_smarter">Clasifica mejor.</string>
+    <string name="splash_recycle_better">Recicla mejor. Juntos.</string>
+
+    <!-- ScanScreen -->
+    <string name="scan_title">Escanear Residuos</string>
+    <string name="point_camera">Apunta la cámara a un artículo para identificarlo</string>
+    <string name="capture">Capturar</string>
+    <string name="flash">Flash</string>
+    <string name="switch_camera">Cambiar Cámara</string>
+
+    <!-- TipsScreen -->
+    <string name="eco_tips_title">Consejos Ecológicos</string>
+    <string name="tip_1_title">Reduce los Plásticos de un Solo Uso</string>
+    <string name="tip_1_desc">Lleva una botella de agua y bolsas de compras reutilizables.</string>
+    <string name="tip_2_title">Conceptos Básicos de Compostaje</string>
+    <string name="tip_2_desc">Convierte los restos de comida en tierra rica en nutrientes para las plantas.</string>
+    <string name="tip_3_title">Reciclaje de Residuos Electrónicos</string>
+    <string name="tip_3_desc">Nunca tires la electrónica a la basura. Llévala a un centro especializado.</string>
+</resources>

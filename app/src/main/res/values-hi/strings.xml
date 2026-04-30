@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SortSmart-SE</string>
+
+    <!-- HomeScreen -->
+    <string name="smart_waste_sorting">स्मार्ट अपशिष्ट छँटाई</string>
+    <string name="notifications">सूचनाएं</string>
+    <string name="quick_categories">त्वरित श्रेणियाँ</string>
+    <string name="plastic">प्लास्टिक</string>
+    <string name="paper">कागज़</string>
+    <string name="glass">कांच</string>
+    <string name="food">भोजन</string>
+    <string name="hazardous">खतरनाक</string>
+    <string name="browse_categories">श्रेणियां ब्राउज़ करें</string>
+    <string name="browse_categories_desc">अपशिष्ट प्रकार और उन्हें सही तरीके से निपटाने का तरीका देखें।</string>
+    <string name="recent_searches">हाल की खोजें</string>
+    <string name="recent_searches_desc">अपना हालिया खोज इतिहास देखें।</string>
+
+    <!-- BottomNavBar -->
+    <string name="nav_home">होम</string>
+    <string name="nav_scan">स्कैन</string>
+    <string name="nav_tips">सुझाव</string>
+    <string name="nav_profile">प्रोफ़ाइल</string>
+
+    <!-- SearchBar -->
+    <string name="search_placeholder">कचरा खोजें</string>
+    <string name="search_icon">खोज आइकन</string>
+    <string name="clear_search">खोज साफ़ करें</string>
+
+    <!-- SearchResultsScreen -->
+    <string name="search_results">खोज के परिणाम</string>
+    <string name="back">पीछे</string>
+    <string name="results">परिणाम</string>
+
+    <!-- ItemDetailScreen -->
+    <string name="favorite">पसंदीदा</string>
+    <string name="how_to_dispose">कैसे निपटें</string>
+    <string name="preparation">तैयारी</string>
+    <string name="why">क्यों?</string>
+    <string name="remove_from_favorites">पसंदीदा से हटाएं</string>
+    <string name="save_to_favorites">पसंदीदा में सहेजें</string>
+
+    <!-- FavoritesScreen -->
+    <string name="favorites_and_history">पसंदीदा और इतिहास</string>
+    <string name="favorites">पसंदीदा</string>
+    <string name="recent">हालिया</string>
+    <string name="no_items_found">कोई वस्तु नहीं मिली।</string>
+
+    <!-- SplashScreen -->
+    <string name="logo">लोगो</string>
+    <string name="splash_smart_waste">स्मार्ट वेस्ट</string>
+    <string name="splash_sorting">सॉर्टिंग</string>
+    <string name="splash_assistant">असिस्टेंट</string>
+    <string name="splash_sort_smarter">स्मार्ट तरीके से छाँटें।</string>
+    <string name="splash_recycle_better">बेहतर रीसायकल करें। एक साथ।</string>
+
+    <!-- ScanScreen -->
+    <string name="scan_title">कचरा स्कैन करें</string>
+    <string name="point_camera">पहचानने के लिए कैमरे को वस्तु पर इंगित करें</string>
+    <string name="capture">खींचें</string>
+    <string name="flash">फ़्लैश</string>
+    <string name="switch_camera">कैमरा बदलें</string>
+
+    <!-- TipsScreen -->
+    <string name="eco_tips_title">पर्यावरण सुझाव</string>
+    <string name="tip_1_title">सिंगल-यूज प्लास्टिक कम करें</string>
+    <string name="tip_1_desc">पुन: प्रयोज्य पानी की बोतल और शॉपिंग बैग ले जाएं।</string>
+    <string name="tip_2_title">खाद बनाने की मूल बातें</string>
+    <string name="tip_2_desc">भोजन के अवशेषों को पौधों के लिए पोषक तत्वों से भरपूर मिट्टी में बदलें।</string>
+    <string name="tip_3_title">ई-कचरा रीसाइक्लिंग</string>
+    <string name="tip_3_desc">इलेक्ट्रॉनिक्स को कभी कूड़ेदान में न फेंकें। उन्हें ई-कचरा केंद्र में ले जाएं।</string>
+</resources>

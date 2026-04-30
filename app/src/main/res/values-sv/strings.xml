@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SortSmart-SE</string>
+
+    <!-- HomeScreen -->
+    <string name="smart_waste_sorting">Smart Avfallssortering</string>
+    <string name="notifications">Aviseringar</string>
+    <string name="quick_categories">Snabbkategorier</string>
+    <string name="plastic">Plast</string>
+    <string name="paper">Papper</string>
+    <string name="glass">Glas</string>
+    <string name="food">Mat</string>
+    <string name="hazardous">Farligt avfall</string>
+    <string name="browse_categories">Bläddra bland kategorier</string>
+    <string name="browse_categories_desc">Utforska avfallstyper och hur man kasserar dem korrekt.</string>
+    <string name="recent_searches">Senaste sökningarna</string>
+    <string name="recent_searches_desc">Se din senaste sökhistorik.</string>
+
+    <!-- BottomNavBar -->
+    <string name="nav_home">Hem</string>
+    <string name="nav_scan">Skanna</string>
+    <string name="nav_tips">Tips</string>
+    <string name="nav_profile">Profil</string>
+
+    <!-- SearchBar -->
+    <string name="search_placeholder">Sök avfall</string>
+    <string name="search_icon">Sökikon</string>
+    <string name="clear_search">Rensa sökning</string>
+
+    <!-- SearchResultsScreen -->
+    <string name="search_results">Sökresultat</string>
+    <string name="back">Tillbaka</string>
+    <string name="results">Resultat</string>
+
+    <!-- ItemDetailScreen -->
+    <string name="favorite">Favorit</string>
+    <string name="how_to_dispose">Hur man kasserar</string>
+    <string name="preparation">Förberedelse</string>
+    <string name="why">Varför?</string>
+    <string name="remove_from_favorites">Ta bort från favoriter</string>
+    <string name="save_to_favorites">Spara i favoriter</string>
+
+    <!-- FavoritesScreen -->
+    <string name="favorites_and_history">Favoriter &amp; Historik</string>
+    <string name="favorites">Favoriter</string>
+    <string name="recent">Nyligen</string>
+    <string name="no_items_found">Inga objekt hittades.</string>
+
+    <!-- SplashScreen -->
+    <string name="logo">Logotyp</string>
+    <string name="splash_smart_waste">Smart Avfall</string>
+    <string name="splash_sorting">Sortering</string>
+    <string name="splash_assistant">Assistent</string>
+    <string name="splash_sort_smarter">Sortera smartare.</string>
+    <string name="splash_recycle_better">Återvinn bättre. Tillsammans.</string>
+
+    <!-- ScanScreen -->
+    <string name="scan_title">Skanna Avfall</string>
+    <string name="point_camera">Rikta kameran mot ett föremål för att identifiera det</string>
+    <string name="capture">Fånga</string>
+    <string name="flash">Blixt</string>
+    <string name="switch_camera">Byt Kamera</string>
+
+    <!-- TipsScreen -->
+    <string name="eco_tips_title">Eko Tips</string>
+    <string name="tip_1_title">Minska Engångsplast</string>
+    <string name="tip_1_desc">Bär med en återanvändbar vattenflaska och shoppingkassar.</string>
+    <string name="tip_2_title">Komposteringsgrunder</string>
+    <string name="tip_2_desc">Förvandla matrester till näringsrik jord för växter.</string>
+    <string name="tip_3_title">E-avfallsåtervinning</string>
+    <string name="tip_3_desc">Släng aldrig elektronik i papperskorgen. Ta dem till en miljöstation.</string>
+</resources>

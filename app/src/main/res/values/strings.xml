@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SortSmart-SE</string>
+
+    <!-- HomeScreen -->
+    <string name="smart_waste_sorting">Smart Waste Sorting</string>
+    <string name="notifications">Notifications</string>
+    <string name="quick_categories">Quick Categories</string>
+    <string name="plastic">Plastic</string>
+    <string name="paper">Paper</string>
+    <string name="glass">Glass</string>
+    <string name="food">Food</string>
+    <string name="hazardous">Hazardous</string>
+    <string name="metal">Metal</string>
+    <string name="medicine">Medicine</string>
+    <string name="electronics">Electronics</string>
+    <string name="clothes">Clothes</string>
+    <string name="residual">Trash</string>
+    <string name="browse_categories">Browse Categories</string>
+    <string name="browse_categories_desc">Explore waste types and how to dispose of them correctly.</string>
+    <string name="recent_searches">Recent Searches</string>
+    <string name="recent_searches_desc">View your recent search history.</string>
+
+    <!-- BottomNavBar -->
+    <string name="nav_home">Home</string>
+    <string name="nav_scan">Scan</string>
+    <string name="nav_tips">Tips</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- SearchBar -->
+    <string name="search_placeholder">Search waste item</string>
+    <string name="search_icon">Search Icon</string>
+    <string name="clear_search">Clear Search</string>
+
+    <!-- SearchResultsScreen -->
+    <string name="search_results">Search Results</string>
+    <string name="back">Back</string>
+    <string name="results">Results</string>
+
+    <!-- ItemDetailScreen -->
+    <string name="favorite">Favorite</string>
+    <string name="how_to_dispose">How to dispose</string>
+    <string name="preparation">Preparation</string>
+    <string name="why">Why?</string>
+    <string name="remove_from_favorites">Remove from Favorites</string>
+    <string name="save_to_favorites">Save to Favorites</string>
+
+    <!-- FavoritesScreen -->
+    <string name="favorites_and_history">Favorites &amp; History</string>
+    <string name="favorites">Favorites</string>
+    <string name="recent">Recent</string>
+    <string name="no_items_found">No items found.</string>
+
+    <!-- SplashScreen -->
+    <string name="logo">Logo</string>
+    <string name="splash_smart_waste">Smart Waste</string>
+    <string name="splash_sorting">Sorting</string>
+    <string name="splash_assistant">Assistant</string>
+    <string name="splash_sort_smarter">Sort smarter.</string>
+    <string name="splash_recycle_better">Recycle better. Together.</string>
+
+    <!-- ScanScreen -->
+    <string name="scan_title">Scan Waste</string>
+    <string name="point_camera">Point camera at an item to identify it</string>
+    <string name="capture">Capture</string>
+    <string name="flash">Flash</string>
+    <string name="switch_camera">Switch Camera</string>
+
+    <!-- TipsScreen -->
+    <string name="eco_tips_title">Eco Tips</string>
+    <string name="tip_1_title">Reduce Single-Use Plastics</string>
+    <string name="tip_1_desc">Carry a reusable water bottle and shopping bags.</string>
+    <string name="tip_2_title">Composting Basics</string>
+    <string name="tip_2_desc">Turn food scraps into nutrient-rich soil for plants.</string>
+    <string name="tip_3_title">E-Waste Recycling</string>
+    <string name="tip_3_desc">Never throw electronics in the trash. Take them to an e-waste center.</string>
+    <string name="tip_4_title">Sysav Local Update</string>
+    <string name="tip_4_desc">New textile recycling bins have been placed in central Malmö. Remember to seal textiles in plastic bags!</string>
+</resources>
