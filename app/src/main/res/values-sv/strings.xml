@@ -4,6 +4,7 @@
 
     <!-- HomeScreen -->
     <string name="smart_waste_sorting">Smart Avfallssortering</string>
+    <string name="works_offline">Fungerar offline</string>
     <string name="notifications">Aviseringar</string>
     <string name="quick_categories">Snabbkategorier</string>
     <string name="plastic">Plast</string>
@@ -11,6 +12,11 @@
     <string name="glass">Glas</string>
     <string name="food">Mat</string>
     <string name="hazardous">Farligt avfall</string>
+    <string name="metal">Metall</string>
+    <string name="medicine">Medicin</string>
+    <string name="electronics">Elektronik</string>
+    <string name="clothes">Kläder</string>
+    <string name="residual">Restavfall</string>
     <string name="browse_categories">Bläddra bland kategorier</string>
     <string name="browse_categories_desc">Utforska avfallstyper och hur man kasserar dem korrekt.</string>
     <string name="recent_searches">Senaste sökningarna</string>
@@ -31,14 +37,17 @@
     <string name="search_results">Sökresultat</string>
     <string name="back">Tillbaka</string>
     <string name="results">Resultat</string>
+    <string name="search_hint">Prova att söka på \'plast\' eller bläddra bland kategorier.</string>
 
     <!-- ItemDetailScreen -->
     <string name="favorite">Favorit</string>
+    <string name="share">Dela</string>
     <string name="how_to_dispose">Hur man kasserar</string>
     <string name="preparation">Förberedelse</string>
     <string name="why">Varför?</string>
     <string name="remove_from_favorites">Ta bort från favoriter</string>
     <string name="save_to_favorites">Spara i favoriter</string>
+    <string name="hazardous_warning">FARLIGT AVFALL: Lägg inte i vanliga kärl. Lämna till närmaste återvinningscentral.</string>
 
     <!-- FavoritesScreen -->
     <string name="favorites_and_history">Favoriter &amp; Historik</string>
@@ -60,6 +69,8 @@
     <string name="capture">Fånga</string>
     <string name="flash">Blixt</string>
     <string name="switch_camera">Byt Kamera</string>
+    <string name="camera_permission_required">Kamerabehörighet krävs.</string>
+    <string name="not_sure_search">Osäker? Sök manuellt</string>
 
     <!-- TipsScreen -->
     <string name="eco_tips_title">Eko Tips</string>
@@ -69,4 +80,30 @@
     <string name="tip_2_desc">Förvandla matrester till näringsrik jord för växter.</string>
     <string name="tip_3_title">E-avfallsåtervinning</string>
     <string name="tip_3_desc">Släng aldrig elektronik i papperskorgen. Ta dem till en miljöstation.</string>
+    <string name="tip_4_title">Sysav Lokala Nyheter</string>
+    <string name="tip_4_desc">Nya textilinsamlingsbehållare har placerats i centrala Malmö. Kom ihåg att försegla textilier i plastpåsar!</string>
+
+    <!-- ProfileScreen -->
+    <string name="profile_title">Profil</string>
+    <string name="your_impact">Din påverkan</string>
+    <string name="impact_items_sorted">🎉 Du har sorterat %d föremål korrekt!</string>
+    <string name="impact_kg_saved">Det är ungefär %s kg sparat från deponin.</string>
+    <string name="settings">Inställningar</string>
+    <string name="saved_favorites_history">Sparade favoriter &amp; historik</string>
+    <string name="view_bookmarked_items">Visa dina bokmärkta objekt</string>
+    <string name="municipality">Kommun</string>
+    <string name="municipality_note">* Regler optimerade för Sysav/Malmö-standarder.</string>
+    <string name="language">Språk</string>
+    <string name="lang_svenska">Svenska</string>
+    <string name="lang_english">English</string>
+
+    <!-- OnboardingScreen -->
+    <string name="onboarding_welcome_title">Välkommen till SortSmart SE 🌱</string>
+    <string name="onboarding_welcome_desc">Din intelligenta guide till återvinning i Sverige. Skanna föremål eller sök i databasen för att hitta exakt vilken behållare de tillhör.</string>
+    <string name="onboarding_next">Nästa</string>
+    <string name="onboarding_setup_title">Anpassa din inställning</string>
+    <string name="onboarding_setup_desc">Olika kommuner har lite olika återvinningsregler. Välj din nedan:</string>
+    <string name="onboarding_select_municipality">Välj kommun</string>
+    <string name="onboarding_municipality_note">* Regler optimerade för Sysav/Malmö-standarder.</string>
+    <string name="onboarding_get_started">Kom igång</string>
 </resources>

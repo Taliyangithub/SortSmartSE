@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SortSmartSE - School Presentation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="presentation">
+        <!-- Slide 1: Title -->
+        <section class="slide active" id="slide-1">
+            <h1>SortSmartSE</h1>
+            <p>Smart Waste Sorting Assistant for a Sustainable Future</p>
+            <div style="margin-top: 2rem; font-size: 1.2rem; opacity: 0.6;">Press Space or Arrows to Navigate</div>
+        </section>
+
+        <!-- Slide 2: The Problem -->
+        <section class="slide" id="slide-2">
+            <h2>The Challenge</h2>
+            <p>Recycling is essential, but it's often confusing. Different municipalities have different rules, and "wish-cycling" (guessing) leads to contamination in recycling bins.</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>70% Confusion</h3>
+                    <p>People often struggle to identify the correct category for complex household waste.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>High Contamination</h3>
+                    <p>Incorrect sorting increases the cost and decreases the efficiency of recycling plants.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: The Solution -->
+        <section class="slide" id="slide-3">
+            <div style="display: flex; align-items: center; gap: 4rem;">
+                <div style="flex: 1; text-align: left;">
+                    <h2>The Innovation</h2>
+                    <p style="text-align: left;">SortSmartSE brings AI to your kitchen. By combining on-device machine learning with local municipal rules, we make recycling effortless and accurate.</p>
+                    <ul style="list-style: none; font-size: 1.2rem; color: var(--primary-green);">
+                        <li>✓ Real-time AI Classification</li>
+                        <li>✓ Localized Sorting Rules</li>
+                        <li>✓ Multi-language Accessibility</li>
+                    </ul>
+                </div>
+                <div class="mockup-container">
+                    <img src="mockup.png" alt="App Mockup">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: AI Scanner -->
+        <section class="slide" id="slide-4">
+            <h2>AI-Powered Scanner</h2>
+            <p>Leveraging Google ML Kit for high-performance object detection and image labeling.</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Smart Filtering</h3>
+                    <p>Advanced logic filters out background noise like furniture or people to focus purely on waste items.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Confidence Boost</h3>
+                    <p>Dual-pass analysis (Object Detection + Labeling) ensures high accuracy even in poor lighting.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Instant Feedback</h3>
+                    <p>Real-time visual markers show exactly what the AI sees and its confidence level.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Privacy First</h3>
+                    <p>All processing happens locally on your device. No images are ever sent to the cloud.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Municipal Intelligence -->
+        <section class="slide" id="slide-5">
+            <h2>Municipal Intelligence</h2>
+            <p>A static guide isn't enough. SortSmartSE understands the specific rules of local waste management authorities.</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>VA SYD Integration</h3>
+                    <p>Directly incorporates sorting rules for Malmö and Lund regions.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>100+ Item Database</h3>
+                    <p>Detailed instructions for everything from pizza boxes to lithium batteries.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Accessibility -->
+        <section class="slide" id="slide-6">
+            <h2>Built for Everyone</h2>
+            <p>Environmental action requires community-wide participation. We've removed the language barrier.</p>
+            <div class="tech-stack" style="margin-top: 2rem;">
+                <div class="tech-item">Svenska</div>
+                <div class="tech-item">English</div>
+                <div class="tech-item">Français</div>
+                <div class="tech-item">Español</div>
+                <div class="tech-item">Urdu</div>
+                <div class="tech-item">Arabic</div>
+            </div>
+            <p style="margin-top: 2rem;">Full support for offline mode ensures the app works in basements and recycling centers where signal is weak.</p>
+        </section>
+
+        <!-- Slide 7: Tech Stack -->
+        <section class="slide" id="slide-7">
+            <h2>Modern Architecture</h2>
+            <p>Built with the latest Android technologies for performance and maintainability.</p>
+            <div class="tech-stack">
+                <div class="tech-item">Kotlin</div>
+                <div class="tech-item">Jetpack Compose</div>
+                <div class="tech-item">Google ML Kit</div>
+                <div class="tech-item">Room Persistence</div>
+                <div class="tech-item">CameraX</div>
+                <div class="tech-item">Coroutines & Flow</div>
+                <div class="tech-item">Material 3 Design</div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Impact -->
+        <section class="slide" id="slide-8">
+            <h2>Small Steps, Big Impact</h2>
+            <p>By empowering individuals to sort correctly, we reduce landfill waste and maximize the value of our recycled resources.</p>
+            <h1 style="font-size: 3rem;">Let's build a greener future together.</h1>
+            <p style="margin-top: 3rem; font-size: 1rem; opacity: 0.5;">Thank You!</p>
+        </section>
+    </div>
+
+    <div class="controls">
+        <button class="btn" id="prevBtn">←</button>
+        <button class="btn" id="nextBtn">→</button>
+    </div>
+
+    <div class="progress-bar" id="progressBar"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

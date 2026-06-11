@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SortSmartSE - Technical Deep Dive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2ecc71;
+            --primary-glow: rgba(46, 204, 113, 0.4);
+            --bg: #05080a;
+            --surface: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.08);
+            --text: #e0e7e1;
+            --text-dim: #a0afaa;
+            --accent: #3498db;
+            --font-main: 'Outfit', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg);
+            color: var(--text);
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* Background effects */
+        .bg-glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+            height: 80vh;
+            background: radial-gradient(circle, rgba(46, 204, 113, 0.05) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .grid-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(var(--border) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -2;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        /* Presentation Wrapper */
+        .presentation {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: scale(1.1) translateY(20px);
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1) translateY(0);
+        }
+
+        .slide.prev {
+            transform: scale(0.9) translateY(-20px);
+            opacity: 0;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 5.5rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-dim);
+            max-width: 800px;
+            text-align: center;
+            margin-bottom: 3rem;
+            line-height: 1.5;
+        }
+
+        /* Components */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .tech-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 2.5rem;
+            border-radius: 32px;
+            backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .tech-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-10px);
+            background: rgba(46, 204, 113, 0.05);
+        }
+
+        .tech-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .tech-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .tech-card p {
+            color: var(--text-dim);
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .code-block {
+            background: #000;
+            padding: 2rem;
+            border-radius: 20px;
+            font-family: var(--font-mono);
+            font-size: 1rem;
+            color: #a9b7c6;
+            border: 1px solid var(--border);
+            width: 100%;
+            max-width: 900px;
+            margin-top: 2rem;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .code-block::after {
+            content: 'Kotlin / ML Kit';
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--primary);
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 800;
+        }
+
+        /* Hero Image */
+        .hero-img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 40px;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+            border: 1px solid var(--border);
+        }
+
+        /* Controls */
+        .nav-controls {
+            position: fixed;
+            bottom: 3rem;
+            right: 3rem;
+            display: flex;
+            gap: 1.5rem;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        .progress-indicator {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 6px;
+            background: var(--primary);
+            width: 0%;
+            transition: width 0.4s ease;
+            z-index: 1001;
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+
+        .slide-number {
+            position: fixed;
+            bottom: 3.5rem;
+            left: 3rem;
+            font-family: var(--font-mono);
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            opacity: 0.5;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.9rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-lines"></div>
+    <div class="bg-glow"></div>
+
+    <div class="presentation">
+        <!-- Slide 1: Intro -->
+        <section class="slide active" id="slide-1">
+            <img src="../tech_hero_1778065792393.png" alt="SortSmartSE" class="hero-img float" style="margin-bottom: 3rem;">
+            <h1>SortSmart<span style="color: var(--primary);">SE</span></h1>
+            <p class="subtitle">A Technical Deep Dive into the Smart Waste Sorting Assistant</p>
+            <div style="display: flex; gap: 1rem;">
+                <span class="tag">Jetpack Compose</span>
+                <span class="tag">Google ML Kit</span>
+                <span class="tag">Room DB</span>
+                <span class="tag">CameraX</span>
+            </div>
+        </section>
+
+        <!-- Slide 2: The Core Pipeline -->
+        <section class="slide" id="slide-2">
+            <h2>The Vision Pipeline</h2>
+            <p class="subtitle">How SortSmartSE sees and understands waste in real-time.</p>
+            <div class="card-grid">
+                <div class="tech-card">
+                    <h3>1. Dual-Pass Analysis</h3>
+                    <p>We combine <b>Object Detection</b> (spatial awareness) with <b>Image Labeling</b> (classification) for maximum precision.</p>
+                </div>
+                <div class="tech-card">
+                    <h3>2. Smart Filtering</h3>
+                    <p>Advanced exclusion logic filters out "noise" like furniture, pets, or hands, focusing only on <b>Waste-related artifacts</b>.</p>
+                </div>
+                <div class="tech-card">
+                    <h3>3. Detection Boost</h3>
+                    <p>Confidence scores are dynamically boosted by <b>10%</b> if a prominent object is detected in the viewfinder frame.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Smart Label Mapping -->
+        <section class="slide" id="slide-3">
+            <h2>Context-Aware Intelligence</h2>
+            <p class="subtitle">Translating generic AI labels into actionable sorting rules.</p>
+            <div class="code-block">
+                <span style="color: #629755;">// Smart Label Mapper Logic</span><br>
+                <span style="color: #cc7832;">val</span> labelMapper = <span style="color: #9876aa;">mapOf</span>(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #6a8759;">"Plastic"</span> <span style="color: #cc7832;">to</span> <span style="color: #6a8759;">"Plastic Packaging"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #6a8759;">"Bottle"</span> <span style="color: #cc7832;">to</span> <span style="color: #6a8759;">"Plastic bottle"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #6a8759;">"Carton"</span> <span style="color: #cc7832;">to</span> <span style="color: #6a8759;">"Paper Packaging"</span><br>
+                )<br><br>
+                <span style="color: #629755;">// Thresholding with Detection Boost</span><br>
+                <span style="color: #cc7832;">val</span> threshold = <span style="color: #6897bb;">0.45f</span> - detectionBoost
+            </div>
+            <p style="margin-top: 2rem; color: var(--text-dim); text-align: center; max-width: 800px;">
+                Generic labels like "Juice" or "Milk" are automatically mapped to <b>Paper Packaging</b> based on Malmö's specific sorting requirements.
+            </p>
+        </section>
+
+        <!-- Slide 4: Data Architecture -->
+        <section class="slide" id="slide-4">
+            <h2>Local-First Persistence</h2>
+            <p class="subtitle">Ensuring 100% functionality in recycling centers with weak signal.</p>
+            <div class="card-grid">
+                <div class="tech-card">
+                    <h3>Room Database</h3>
+                    <p>Highly optimized local SQLite storage for sorting rules, instructions, and favorites.</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Zero Cloud</h3>
+                    <p>All processing happens on-device. Privacy is guaranteed and speed is instantaneous.</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Full Search</h3>
+                    <p>Keyword-based search engine indexed locally for millisecond response times.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Multi-Language Engine -->
+        <section class="slide" id="slide-5">
+            <h2>Global Accessibility</h2>
+            <p class="subtitle">Environmental action knows no borders.</p>
+            <div style="display: flex; gap: 4rem; align-items: center; width: 100%; max-width: 1000px;">
+                <div style="flex: 1;">
+                    <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">Native L10n</h3>
+                    <p style="font-size: 1.2rem; color: var(--text-dim); line-height: 1.6;">
+                        Built-in support for <span class="highlight">Swedish, English, Arabic, Urdu, French, and Spanish</span>. 
+                        The app adapts its UI and sorting instructions to the user's primary language automatically.
+                    </p>
+                </div>
+                <div style="flex: 1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                    <div class="tag" style="padding: 1rem; text-align: center;">Svenska</div>
+                    <div class="tag" style="padding: 1rem; text-align: center;">English</div>
+                    <div class="tag" style="padding: 1rem; text-align: center;">Français</div>
+                    <div class="tag" style="padding: 1rem; text-align: center;">Español</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: UI Engineering -->
+        <section class="slide" id="slide-6">
+            <h2>Modern UI Engineering</h2>
+            <p class="subtitle">State-of-the-art Android development with Jetpack Compose.</p>
+            <div class="card-grid">
+                <div class="tech-card">
+                    <h3>Declarative UI</h3>
+                    <p>Clean, maintainable code with Jetpack Compose. No XML, just pure Kotlin power.</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Material 3</h3>
+                    <p>Utilizing Dynamic Color and modern Material design tokens for a premium feel.</p>
+                </div>
+                <div class="tech-card">
+                    <h3>CameraX</h3>
+                    <p>Seamless camera lifecycle management and high-frame-rate analysis buffer.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Tech Stack -->
+        <section class="slide" id="slide-7">
+            <h2>The Powerhouse</h2>
+            <div class="card-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="tech-card" style="padding: 1.5rem; text-align: center;">
+                    <h3 style="color: var(--primary);">Kotlin</h3>
+                    <p>Core Logic</p>
+                </div>
+                <div class="tech-card" style="padding: 1.5rem; text-align: center;">
+                    <h3 style="color: var(--primary);">Compose</h3>
+                    <p>UI Framework</p>
+                </div>
+                <div class="tech-card" style="padding: 1.5rem; text-align: center;">
+                    <h3 style="color: var(--primary);">ML Kit</h3>
+                    <p>AI Engine</p>
+                </div>
+                <div class="tech-card" style="padding: 1.5rem; text-align: center;">
+                    <h3 style="color: var(--primary);">Room</h3>
+                    <p>Local DB</p>
+                </div>
+                <div class="tech-card" style="padding: 1.5rem; text-align: center;">
+                    <h3 style="color: var(--primary);">Coroutines</h3>
+                    <p>Async Ops</p>
+                </div>
+                <div class="tech-card" style="padding: 1.5rem; text-align: center;">
+                    <h3 style="color: var(--primary);">CameraX</h3>
+                    <p>Live Vision</p>
+                </div>
+                <div class="tech-card" style="padding: 1.5rem; text-align: center;">
+                    <h3 style="color: var(--primary);">Navigation</h3>
+                    <p>Flow Control</p>
+                </div>
+                <div class="tech-card" style="padding: 1.5rem; text-align: center;">
+                    <h3 style="color: var(--primary);">Flow</h3>
+                    <p>Reactive Data</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Conclusion -->
+        <section class="slide" id="slide-8">
+            <h2 style="font-size: 5rem;">Thank You</h2>
+            <p class="subtitle" style="font-size: 2rem;">"Building tools for a sustainable tomorrow."</p>
+            <div style="margin-top: 4rem; opacity: 0.4; font-family: var(--font-mono);">
+                PRESENTED BY ANTIGRAVITY | 2026
+            </div>
+        </section>
+    </div>
+
+    <div class="slide-number" id="slideNum">1 / 8</div>
+
+    <div class="nav-controls">
+        <button class="nav-btn" id="prevBtn">←</button>
+        <button class="nav-btn" id="nextBtn">→</button>
+    </div>
+
+    <div class="progress-indicator" id="progressBar"></div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const progressBar = document.getElementById('progressBar');
+        const slideNum = document.getElementById('slideNum');
+        
+        let currentSlide = 0;
+
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active', 'prev');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                } else if (index < currentSlide) {
+                    slide.classList.add('prev');
+                }
+            });
+
+            const progress = ((currentSlide + 1) / slides.length) * 100;
+            progressBar.style.width = `${progress}%`;
+            slideNum.innerText = `${currentSlide + 1} / ${slides.length}`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlides();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlides();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    updateSlides();
+                }
+            } else if (e.key === 'ArrowLeft') {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSlides();
+                }
+            }
+        });
+
+        // Initialize
+        updateSlides();
+    </script>
+</body>
+</html>

@@ -4,6 +4,7 @@
 
     <!-- HomeScreen -->
     <string name="smart_waste_sorting">Smart Waste Sorting</string>
+    <string name="works_offline">Works Offline</string>
     <string name="notifications">Notifications</string>
     <string name="quick_categories">Quick Categories</string>
     <string name="plastic">Plastic</string>
@@ -36,14 +37,17 @@
     <string name="search_results">Search Results</string>
     <string name="back">Back</string>
     <string name="results">Results</string>
+    <string name="search_hint">Try searching for \'plastic\' or browse categories.</string>
 
     <!-- ItemDetailScreen -->
     <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
     <string name="how_to_dispose">How to dispose</string>
     <string name="preparation">Preparation</string>
     <string name="why">Why?</string>
     <string name="remove_from_favorites">Remove from Favorites</string>
     <string name="save_to_favorites">Save to Favorites</string>
+    <string name="hazardous_warning">HAZARDOUS WASTE: Do not put in regular bins. Take to nearest recycling center.</string>
 
     <!-- FavoritesScreen -->
     <string name="favorites_and_history">Favorites &amp; History</string>
@@ -65,6 +69,8 @@
     <string name="capture">Capture</string>
     <string name="flash">Flash</string>
     <string name="switch_camera">Switch Camera</string>
+    <string name="camera_permission_required">Camera permission is required.</string>
+    <string name="not_sure_search">Not sure? Search manually</string>
 
     <!-- TipsScreen -->
     <string name="eco_tips_title">Eco Tips</string>
@@ -76,4 +82,28 @@
     <string name="tip_3_desc">Never throw electronics in the trash. Take them to an e-waste center.</string>
     <string name="tip_4_title">Sysav Local Update</string>
     <string name="tip_4_desc">New textile recycling bins have been placed in central Malmö. Remember to seal textiles in plastic bags!</string>
+
+    <!-- ProfileScreen -->
+    <string name="profile_title">Profile</string>
+    <string name="your_impact">Your Impact</string>
+    <string name="impact_items_sorted">🎉 You have correctly sorted %d items!</string>
+    <string name="impact_kg_saved">That\'s approximately %s kg saved from the landfill.</string>
+    <string name="settings">Settings</string>
+    <string name="saved_favorites_history">Saved Favorites &amp; History</string>
+    <string name="view_bookmarked_items">View your bookmarked items</string>
+    <string name="municipality">Municipality</string>
+    <string name="municipality_note">* Rules currently optimized for Sysav/Malmö standards.</string>
+    <string name="language">Language</string>
+    <string name="lang_svenska">Svenska</string>
+    <string name="lang_english">English</string>
+
+    <!-- OnboardingScreen -->
+    <string name="onboarding_welcome_title">Welcome to SortSmart SE 🌱</string>
+    <string name="onboarding_welcome_desc">Your intelligent guide to recycling in Sweden. Scan items or search the database to find exactly which bin they belong in.</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_setup_title">Customize Your Setup</string>
+    <string name="onboarding_setup_desc">Different municipalities have slightly different recycling rules. Choose yours below:</string>
+    <string name="onboarding_select_municipality">Select Municipality</string>
+    <string name="onboarding_municipality_note">* Rules currently optimized for Sysav/Malmö standards.</string>
+    <string name="onboarding_get_started">Get Started</string>
 </resources>
